@@ -41,6 +41,7 @@ Clone this repository in your terminal:
 
 ```bash
 git clone https://github.com/kamisos3/holbertonschool-web_back_end/tree/main/python_variable_annotations
+```
 
 ▶ **Author**
 
