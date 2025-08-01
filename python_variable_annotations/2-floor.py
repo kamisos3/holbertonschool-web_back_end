@@ -4,5 +4,8 @@ import math
 
 
 def floor(n: float) -> int:
-    """Returns the floor of a float as an integer that is the first number making it a integer"""
+    """
+    Returns the floor of a float as an integer, 
+    that is the first number making it a integer
+    """
     return math.floor(n)
