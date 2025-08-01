@@ -11,7 +11,7 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     """Prints delayed floats in ascending order"""
     tasks = [asyncio.create_task(wait_random(max_delay)) for _ in range(n)]
     delays = await asyncio.gather(*tasks)
-    
+
     result = []
     for delay in delays:
         inserted = False
@@ -22,5 +22,5 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
                 break
         if not inserted:
             result.append(delay)
-    
+
     return result
