@@ -4,8 +4,7 @@ import asyncio
 import time
 from importlib import import_module
 
-async_comprehension =
-import_module('1-async_comprehension').async_comprehension
+async_comprehension = import_module('1-async_comprehension').async_comprehension
 
 
 async def measure_runtime() -> float:
