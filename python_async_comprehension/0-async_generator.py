@@ -4,10 +4,10 @@ Async Generator module
 """
 import asyncio
 import random
-from typing import AsyncGenerator
+import typing
 
 
-async def async_generator() -> AsyncGenerator[float, None]:
+async def async_generator() -> typing.Generator[float, None, None]:
     """Loops 10 times, printing a float every second"""
     for _ in range(10):
         await asyncio.sleep(1)
