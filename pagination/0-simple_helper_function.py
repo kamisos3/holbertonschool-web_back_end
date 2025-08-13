@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-from typing import Tuple
-"""Imports tuple"""
 
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
