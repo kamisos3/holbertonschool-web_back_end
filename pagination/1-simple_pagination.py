@@ -2,6 +2,10 @@
 """
 Main file
 """
+import csv
+import math
+from typing import List
+
 
 index_range = __import__('0-simple_helper_function').index_range
 
@@ -12,10 +16,6 @@ print(res)
 res = index_range(page=3, page_size=15)
 print(type(res))
 print(res)
-
-import csv
-import math
-from typing import List
 
 
 class Server:
@@ -38,15 +38,14 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-           """Returning a specific row of a detaset"""
-           assert isinstance(page, int) and page > 0
-           assert isinstance(page_size, int) and page_size > 0
+        """Returning a specific row of a detaset"""
+        assert isinstance(page, int) and page > 0
+        assert isinstance(page_size, int) and page_size > 0
 
-           start, end = index_range(page, page_size)
-           data = self.dataset()
+        start, end = index_range(page, page_size)
+        data = self.dataset()
 
-           if start >= len(data):
-                return []
+        if start >= len(data):
+            return []
 
-           return data[start:end]
- 
+        return data[start:end]
