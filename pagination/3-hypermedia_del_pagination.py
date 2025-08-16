@@ -58,7 +58,7 @@ class Server:
                 collected += 1
             current_index += 1
 
-        next_index = current_index
+        next_index = current_index 
 
         return {
             "index": index,
