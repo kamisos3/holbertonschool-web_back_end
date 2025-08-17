@@ -1,0 +1,2 @@
+// Lists name of the objects listed
+db.school.find({name: "Holberton school"})
