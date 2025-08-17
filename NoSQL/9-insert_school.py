@@ -3,6 +3,6 @@
 
 def insert_school(mongo_collection, **kwargs):
     """Using kwargs to insert a nee document to a collection"""
-    result = mongo_collection.kwargs(_id)
+    result = mongo_collection.insert_one(kwargs)
 
-    return result._id
+    return result.inserted_id
