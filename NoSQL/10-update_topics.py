@@ -5,6 +5,6 @@
 def update_topics(mongo_collection, name, topics):
     """Changes all topics of a document"""
     mongo_collection.update(
-        { "name": name },
-        { "$set": { "topics": topics } }
+        {"name": name},
+        {"$set": {"topics": topics}}
     )
