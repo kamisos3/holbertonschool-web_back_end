@@ -8,7 +8,7 @@ if __name__ == "__main__":
     collection = client.logs.nginx
 
     total_logs = collection.count_documents({})
-    print(f"{total_logs} logs")
+    print("{} logs".format(total_logs))
 
     print("Methods:")
     methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
