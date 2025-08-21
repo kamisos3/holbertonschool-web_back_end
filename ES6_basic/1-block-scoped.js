@@ -1,5 +1,4 @@
 export default function taskBlock(trueOrFalse) {
-// Fixing variable overwrite in the inner block
   const task = false;
   const task2 = true;
 
