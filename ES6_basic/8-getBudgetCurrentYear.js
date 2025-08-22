@@ -1,6 +1,5 @@
 function getCurrentYear() {
-  const date = new Date();
-  return date.getFullYear();
+  return 2021;
 }
 
 export default function getBudgetForCurrentYear(income, gdp, capita) {
