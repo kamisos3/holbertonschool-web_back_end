@@ -32,7 +32,7 @@ This folder contains multiple JavaScript files, each focusing on a different ES6
 
 ▶ **Example**
 
-Here is an example of an ES6 function using the spread operator:
+ES6 function using the spread operator:
 
 ```javascript
 export default function concatArrays(array1, array2, string) {
