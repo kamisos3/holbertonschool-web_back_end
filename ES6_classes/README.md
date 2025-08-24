@@ -1,1 +1,1 @@
-# ES6 - Classes
+# JavaScript ES6 - Classes
