@@ -5,6 +5,6 @@ process.stdin.on('data', (input) => {
   console.log(`Your name is: ${input.trim()}`);
 });
 
-process.stdin.on('end', () => {
+process.stdin.on('end', function() {
   console.log('This important software is now closing');
 });
