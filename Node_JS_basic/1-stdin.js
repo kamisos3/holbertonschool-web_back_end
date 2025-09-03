@@ -9,9 +9,8 @@ if (process.stdin.isTTY) {
     console.log(`Your name is: ${name}`);
     process.exit(0);
   });
-
 } else {
-  process.stdin.on('data', chunk => {
+  process.stdin.on('data', (chunk) => {
     buffer += chunk;
   });
 
