@@ -19,7 +19,7 @@ function countStudents(path) {
     const firstName = parts[0];
     const field = parts[parts.length - 1];
 
-    if (!byField[field]) byField[field] = [];
+    if (!byField[field])byField[field] = [];
     byField[field].push(firstName);
   }
 
