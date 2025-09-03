@@ -3,14 +3,21 @@ process.stdin.setEncoding('utf8');
 
 let buffer = '';
 
-process.stdin.on('data', (chunk) => {
-  buffer += chunk;
-});
+if (process.stdin.isTTY) {
+  process.stdin.on('data', (chunk) => {
+    const name = chunk.trim();
+    console.log(`Your name is: ${name}`);
+    process.exit(0);
+  });
 
-process.stdin.on('end', () => {
-  const name = buffer.trim();
+} else {
+  process.stdin.on('data', chunk => {
+    buffer += chunk;
+  });
 
-  console.log(`Your name is: ${name.trim()}`);
-  console.log('This important software is now closing');
-  process.exit(0);
-});
+  process.stdin.on('end', () => {
+    const name = buffer.trim();
+    console.log(`Your name is: ${name.trim()}`);
+    console.log('This important software is now closing');
+  });
+}
