@@ -19,14 +19,14 @@ function countStudents(path) {
     const firstName = parts[0];
     const field = parts[parts.length - 1];
 
-    if (!byField[field]) {
-      byField[field] = [];
-    }
+    if (!byField[field]) byField[field] = [];
     byField[field].push(firstName);
   }
 
   for (const [field, students] of Object.entries(byField)) {
-    console.log(`Number of students in ${field}: ${students.lenght}. List: ${students.join(', ')}`);
+    console.log(
+      `Number of students in ${field}: ${students.length}. List: ${students.join(', ')}`
+    );
   }
 }
 
