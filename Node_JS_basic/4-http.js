@@ -1,15 +1,16 @@
-const http = require('http');
+const { createServer } = require('node:http');
 
-const app = http.createServer((req, res) => {
+const localhost = 1245;
+
+const app = createServer((req, res) => {
   if (req.url === '/') {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('Hello Holberton School!');
   } else {
-    res.writeHead(404);
-    res.end();
+    res.end('Hello Holberton School!');
   }
 });
 
-app.listen(1245);
+app.listen(localhost);
 
 module.exports = app;
