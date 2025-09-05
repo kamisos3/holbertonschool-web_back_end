@@ -2,6 +2,7 @@
 module.exports = {
   env: {
     browser: false,
+    node: true,
     es6: true,
     jest: true,
   },
@@ -32,7 +33,7 @@ module.exports = {
   overrides:[
     {
       files: ['*.js'],
-      excludedFiles: 'babel.config.js',
+      excludedFiles: 'babel.config.js'
     }
   ]
 };
