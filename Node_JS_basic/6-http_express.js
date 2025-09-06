@@ -1,12 +1,13 @@
 const express = require('express');
+
 const app = express();
 
 app.get('/', (req, res) => {
-    res.end('Hello Holberton School!');
+  res.end('Hello Holberton School!');
 });
 
 app.listen(1245, () => {
-    console.log('Express server listening on port 1245');
+  console.log('Express server listening on port 1245');
 });
 
 module.exports = app;
