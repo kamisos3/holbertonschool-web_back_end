@@ -12,7 +12,7 @@ const app = createServer((req, res) => {
 
   if (req.url === '/students') {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.write('This is the list of our students');
+    res.write('This is the list of our students\n');
 
     fs.readFile(dbFile, 'utf8', (err, data) => {
       if (err) {
