@@ -11,12 +11,13 @@ const app = createServer((req, res) => {
   }
 
   if (req.url === '/students') {
-    res.writeHead(200, { 'Content-Type': 'text/plain'});
-    res.write('This is the list of our students\n');
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.write('This is the list of our students');
 
     fs.readFile(dbFile, 'utf8', (err, data) => {
       if (err) {
-        return res.end('Cannot load database\n');
+        res.end('Cannot load database\n');
+        return;
       }
 
       const lines = data.split('\n').filter((line) => line.trim() !== '');
@@ -36,12 +37,11 @@ const app = createServer((req, res) => {
       Object.entries(byField).forEach(([field, list]) => {
         res.write(`Number of students in ${field}: ${list.length}. List: ${list.join(', ')}\n`);
       });
-
       res.end();
     });
-    return;
   }
 });
 
 app.listen(port);
+
 module.exports = app;
