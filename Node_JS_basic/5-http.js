@@ -16,6 +16,7 @@ const app = createServer((req, res) => {
 
     fs.readFile(dbFile, 'utf8', (err, data) => {
       if (err) {
+        res.end('Cannot load the database')
         return;
       }
 
