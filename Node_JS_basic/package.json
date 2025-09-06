@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "chai-http": "^4.3.0",
+    "expres": "^0.0.5",
     "express": "^4.21.2",
     "package.json": "^0.0.0"
   },
