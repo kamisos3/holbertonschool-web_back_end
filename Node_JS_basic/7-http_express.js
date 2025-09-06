@@ -42,7 +42,7 @@ app.get('/students', async (req, res) => {
     res.write('This is the list of our students\n');
     res.write(`Number of students: ${stats.total}\n`);
     Object.entries(stats.byField).forEach(([field, list]) => {
-      res.write(`Number of students in ${field}: ${list.length}. List: ${list.join(', ')}\n`);
+      res.write(`Number of students in ${field}: ${list.length}. List: ${list.join(', ')}`);
     });
     res.end();
   } catch (err) {
