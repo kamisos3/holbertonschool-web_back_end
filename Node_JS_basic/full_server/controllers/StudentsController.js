@@ -1,4 +1,4 @@
-import { readDatabase } from '../utils';
+import { readDatabase } from '../utils.js';
 
 export default class StudentsController {
   static async getAllStudents(_req, res) {
@@ -9,10 +9,10 @@ export default class StudentsController {
         a.toLowerCase().localeCompare(b.toLowerCase())
       );
       let message = 'This is the list of our students';
-        fields.forEach((field) => {
-          const list = data[field].join(', ');
-          message += `\nNumber of students in ${field}: ${data[field].length}. List: ${list},`;
-        });
+      for (const field of fields) {
+        const list = data[field].join(", ");
+        message += `\nNumber of students in ${field}: ${data[field].length}. List: ${list}`;
+      }
       res.status(200).send(message);
     } catch (err) {
       res.status(500).send('Cannot load the database');
