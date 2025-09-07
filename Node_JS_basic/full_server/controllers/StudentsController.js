@@ -1,4 +1,3 @@
-
 import { readDatabase } from '../utils.js';
 
 export default class StudentsController {
