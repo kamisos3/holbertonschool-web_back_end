@@ -8,7 +8,7 @@ export function readDatabase(path) {
         const students = lines.slice(1);
         const byField = {};
         students.forEach((row) => {
-          const cols = row.split(',').map((s) => s.trim());
+          const cols = row.split(",").map((s) => s.trim());
           const firstName = cols[0];
           const field = cols[cols.length - 1];
           if (!byField[field]) byField[field] = [];
