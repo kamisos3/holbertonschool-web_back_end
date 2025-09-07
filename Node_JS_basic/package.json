@@ -10,7 +10,7 @@
     "lint": "eslint",
     "check-lint": "lint [0-9]*.js",
     "test": "./node_modules/mocha/bin/mocha --require babel-register --exit",
-    "dev": "nodemon --exec babel-node --presets babel-preset-env ./server.js ./database.csv"
+    "dev": "nodemon --exec babel-node ./full_server/server.js ./database.csv"
   },
   "dependencies": {
     "chai-http": "^4.3.0",
@@ -19,7 +19,10 @@
     "package.json": "^0.0.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.28.4",
+    "@babel/node": "^7.28.0",
+    "@babel/preset-env": "^7.28.3",
     "babel-preset-env": "^0.0.0",
     "chai": "^4.4.1",
     "eslint": "^8.57.1",
