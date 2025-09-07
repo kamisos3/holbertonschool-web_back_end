@@ -1,8 +1,8 @@
 import { promises as fs } from 'fs';
 
-export function readDatabase(path) {
-  return new Promise((resolve, reject) => {
-    fs.readFile(path, "utf8")
+const readDatabase = (path) => {
+  Promise((resolve, reject) => {
+    fs.readFile(path, 'utf8')
       .then((data) => {
         const lines = data.split('\n').filter((line) => line.trim() !== '');
         const students = lines.slice(1);
@@ -20,4 +20,6 @@ export function readDatabase(path) {
         reject(new Error('Cannot load the database'));
       });
   });
-}
+};
+
+export default readDatabase;
